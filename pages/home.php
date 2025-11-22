@@ -1,5 +1,3 @@
-<div>
-    <h1>Mister - Sistema Bancario</h1>
-
-    <h3>O melhor banco para os devs.</h3>
-</div>
+<h2>Bem vindo ao Sistema Bancario</h2>
+<p>Faca login para acessar sua conta.</p>
+<a href="index.php?pg=pages/login">Login</a>
