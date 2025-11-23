@@ -1,6 +1,6 @@
 <h2>Login</h2>
 
-<form action="loginSecao.php" method="post">
+<form action="loginSecao.php" method="POST">
     <label>Email</label>
     <input type="email" name="email" id="" required>
     <label>Senha</label>
