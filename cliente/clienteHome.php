@@ -1,5 +1,5 @@
 <?php
-include_once "../includes/protege.php";
+include_once __DIR__ . "/../includes/protege.php";
 
 if ($_SESSION['tipo'] != 'cliente') {
     echo "Acesso negado!";
