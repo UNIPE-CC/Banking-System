@@ -4,4 +4,5 @@
 
     if(!$conexao){
         echo "Erro ao conectar ao banco";
+        exit;
     }

@@ -1,12 +1,12 @@
 <?php
-    include_once __DIR__ . "/../includes/protege.php";
+    // include_once __DIR__ . "/../includes/protege.php";
 
-    if ($_SESSION['tipo'] != 'admin') {
-        echo "Acesso negado!";
-        exit;
-    }
+    // if ($_SESSION['tipo'] != 'admin') {
+    //     echo "Acesso negado!";
+    //     exit;
+    // }
 
-    require_once __DIR__ . "/../config.inc.php";
+    require_once "controller/config.inc.php";
 
     echo "<h2>Lista de Clientes</h2><hr>";
 

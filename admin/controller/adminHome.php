@@ -6,7 +6,6 @@
 
     $resultado = mysqli_query($conexao, $sql);
 
-    echo "<a href='?pg=controller/form'>Cadastrar Cliente</a>";
     echo "<h2>Lista de Clientes</h2><hr>";
 
     if (mysqli_num_rows($resultado) > 0) {

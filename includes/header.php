@@ -11,6 +11,6 @@
 <body>
     <div class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container-fluid" id="topo">
-            <h2>Logo do sistema</h2>
+            <img src="assets/img/logo.png" style="width: 150px; height: 150px" alt="Logo do Sistema">
         </div>
     </div>
