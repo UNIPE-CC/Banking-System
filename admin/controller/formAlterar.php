@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . "config.inc.php";
+    require_once __DIR__ . "/../config.inc.php";
 
     $id = $_GET['id'];
     $sql = "SELECT * FROM usuarios WHERE id = '$id'";
@@ -19,18 +19,18 @@
 
 <h2>Atualizar Cliente</h2>
 
-<form action="?pg=admin/adminAlterar" method="post">
+<form action="?pg=controller/alterar" method="post">
     <input type="hidden" name="id" value="<?=$id?>">
     <label>Nome:</label>
     <input type="text" name="nome" value="<?=$nome?>"><br>
     <label>cpf:</label>
     <input type="text" name="cpf" value="<?=$cpf?>"><br>
-    <label>email:</label>
+    <label>Email:</label>
     <input type="text" name="email" value="<?=$email?>"><br>
-    <label>senha:</label>
+    <label>Senha:</label>
     <input type="text" name="senha" value="<?=$senha?>"><br>
-    <label>tipo:</label>
+    <label>Tipo:</label>
     <input type="text" name="tipo" value="<?=$tipo?>"><br>
     <input type="submit" value="Atualizar Cliente">
-    <a href='?pg=admin/adminHome'>Voltar</a><br>
+    <a href='?pg=controller/adminHome&id=$dados[id]'>Voltar</a><br>
 </form>
