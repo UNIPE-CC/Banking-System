@@ -1,5 +1,5 @@
 <h2>Cadastrar cliente</h2>
-<form action="index.php?pg=admin/cadastrar" method="post">
+<form action="?pg=controller/cadastrar" method="post">
     <label>Nome</label>
     <input type="text" name="nome" required><br>
     <label>CPF</label>
@@ -9,7 +9,10 @@
     <label>Senha</label>
     <input type="password" name="senha" required><br>
     <label>Tipo</label>
-    <input type="text" name="tipo" required><br>
-
+    <select name="tipo" id="tipo">
+        <option value="Cliente" selected>Cliente</option>
+        <option value="Admin">Admin</option>
+    </select><br>
     <button type="submit">Cadastrar</button>
+    <a href='?pg=controller/adminHome.php'>Voltar</a>
 </form>

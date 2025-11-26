@@ -3,11 +3,12 @@
     $id = $_GET["id"];
     $qsl = "DELETE FROM usuarios WHERE id = '$id'";
 
-    $resultado = mysqli_query($conexaom, $qsl);
+    $resultado = mysqli_query($conexao, $qsl);
 
     if($resultado){
         echo "Usuario deletado com sucesso!";
-        echo "<a href='?pg=admin/adminHome'>Voltar</a>";
+        echo "<a href='?pg=controller/adminHome'>Voltar</a>";
     }
 
     mysqli_close($conexao);
+?>
