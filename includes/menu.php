@@ -7,15 +7,15 @@
             <!-- <li class="nav-item">
                 <a class="nav-link" href="?pg=adminHome">Admin</a>
             </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="?pg=contato">Contato</a>
-            </li> 
             <!-- <li class="nav-item">
                 <a class="nav-link" href="?pg=clienteHome">Saldo</a>
             </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="?pg=sobre">Sobre</a>
             </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="?pg=contato">Contato</a>
+            </li>  -->
             <li class="nav-item">
                 <a class="nav-link" href="?pg=login">Login</a>
             </li>

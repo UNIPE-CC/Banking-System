@@ -2,10 +2,10 @@
 
     echo "<h1>Painel Cliente</h1>";
 
-    echo "<a href='?pg=pages/saldo'>Saldo</a> | ";
-    echo "<a href='?pg=pages/depositar'>Depositar</a> | ";
-    echo "<a href='?pg=pages/sacar'>Sacar</a> | ";
-    echo "<a href='?pg=pages/senhaAlterar'>Alterar senha</a> | ";
+    echo "<a href='?pg=views/saldo'>Saldo</a> | ";
+    echo "<a href='?pg=views/depositar'>Depositar</a> | ";
+    echo "<a href='?pg=views/sacar'>Sacar</a> | ";
+    echo "<a href='?pg=views/senhaAlterar'>Alterar senha</a> | ";
     echo "<hr>";
 
     if(empty($_SERVER['QUERY_STRING'])){
