@@ -1,8 +1,11 @@
 <?php
     //include_once __DIR__ . "/../includes/protege.php";
-    include_once "config.inc.php";
+    include_once __DIR__ . "/../../config.inc.php";
 
-    $sql = "SELECT * FROM usuarios";
+    $sql = "SELECT u.id, u.nome, u.cpf, u.email, u.tipo, c.saldo
+            FROM usuarios u
+            LEFT JOIN contas c ON u.id = c.usuario_id
+            WHERE u.tipo = 'cliente'";
 
     $resultado = mysqli_query($conexao, $sql);
 
@@ -15,6 +18,7 @@
             echo "CPF: " . $dados['cpf'] . "<br>";
             echo "Email: " . $dados['email'] . "<br>";
             echo "Tipo: " . $dados['tipo'] . "<br>";
+            echo "Saldo: R$ " . number_format($dados['saldo'], 2, ',', '.') . "<br>";
             echo "<a href='?pg=controller/formAlterar&id=$dados[id]'>Editar</a><br>";
             echo "<a href='?pg=controller/deletar&id=$dados[id]'>Excluir</a><br>";
             echo "<br>";

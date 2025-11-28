@@ -1,5 +1,5 @@
 <?php
-    require_once "config.inc.php";
+    require_once __DIR__ . "/../../config.inc.php";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nome = $_POST["nome"];
@@ -12,10 +12,16 @@
                 VALUES('$nome', '$cpf', '$email', '$senha', '$tipo')";
 
         if(mysqli_query($conexao, $sql)){
-            echo "<h3>Cliente cadastrado com sucesso!</h3>";
-            echo "<a href='?pg=controller/adminHome>Voltar</a>";
+            $usuario_id = mysqli_insert_id($conexao);
+
+            $sqlConta = "INSERT INTO contas(usuario_id, saldo) VALUES('$usuario_id', 0)";
+            mysqli_query($conexao, $sqlConta);
+
+            echo "<h3>Cliente e conta cadastrado com sucesso!</h3>";
+            echo "<a href='?pg=controller/adminHome'>Voltar</a>";
         }else{
             echo "<h3>Erro ao cadastrar o cliente</h3>";
+            echo "<a href='?pg=controller/adminHome'>Voltar</a>";
         }
     }else{
         echo "<h2>Acesso negado</h2>";

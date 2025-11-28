@@ -1,5 +1,5 @@
 <?php
-    require_once "config.inc.php";
+    require_once __DIR__ . "/../../config.inc.php";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nome = $_POST["nome"];
