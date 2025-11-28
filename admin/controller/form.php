@@ -1,4 +1,5 @@
-<h2>Cadastrar cliente</h2>
+<h2>Cadastrar Cliente</h2>
+<hr>
 <form action="?pg=controller/cadastrar" method="post">
     <label>Nome</label>
     <input type="text" name="nome" required><br>
@@ -14,5 +15,5 @@
         <option value="Admin">Admin</option>
     </select><br>
     <button type="submit">Cadastrar</button>
-    <a href='?pg=controller/adminHome.php'>Voltar</a>
+    <a href='?pg=controller/adminHome'>Voltar</a>
 </form>

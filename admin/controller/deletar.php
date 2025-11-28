@@ -1,5 +1,5 @@
 <?php
-    require_once "config.inc.php";
+    require_once __DIR__ . "/../../config.inc.php";
     $id = $_GET["id"];
     $qsl = "DELETE FROM usuarios WHERE id = '$id'";
 

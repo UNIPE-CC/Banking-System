@@ -1,6 +1,6 @@
 <footer class="navbar navbar-expand-sm bg-primary navbar-dark">
     <h6>
-        <img src="assets/img/logo.png" style="width: 150px; height: 150px" alt="Logo do Sistema">
+        <img src="assets/img/logo.png" style="width: 100px; height: 100px" alt="Logo do Sistema">
         <?php
             $titulo_site = "Sistema Bancario";
             echo $titulo_site;
