@@ -1,0 +1,128 @@
+/* ================================
+   RESET / GLOBAL
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #140f79; 
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+    background: #0f0c5a;
+    color: white;
+    box-shadow: none;
+}
+
+/* ================================
+   INCLUDES
+================================= */
+.navbar {
+    background-color: #140f79;
+}
+
+.navbar .navbar-brand span {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: #cce0ff;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    max-height: 60px;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #0f0c5a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ================================
+   HOME
+================================= */
+.home-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.welcome-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-box h2 {
+    font-size: 28px;
+    color: #1b263b;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    font-size: 16px;
+    color: #33415c;
+    margin-bottom: 20px;
+}
+
+.info-section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #1b263b;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.info-card h4 {
+    font-size: 18px;
+    color: #1b263b;
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    font-size: 15px;
+    color: #3a4a5a;
+}
