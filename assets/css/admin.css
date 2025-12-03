@@ -1,0 +1,59 @@
+/* ================================
+   PAINEL ADMINISTRATIVO
+================================ */
+
+.admin-header{
+    padding: 18px;
+    background-color: #140f79;
+}
+
+.logo-image{
+    height: 60px;
+    margin-left: 95px;
+}
+
+.admin-span {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: -10px;
+}
+
+.admin-menu {
+    margin: 25px 25px 0px;
+    padding-left: 35%;
+}
+
+.admin-menu a {
+    padding: 10px 18px;
+    background: #140f79;
+    color: white;
+    border-radius: 6px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.admin-menu a:hover {
+    background: #0f0c5a;
+}
+
+/* Separador */
+.admin-container hr {
+    margin: 25px 0;
+}
+
+/* Conteúdo dinâmico */
+.admin-content {
+    padding: 10px 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.footer-container{
+    padding-left: -300px;
+}
+
+
