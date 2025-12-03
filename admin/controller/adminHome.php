@@ -1,5 +1,4 @@
 <?php
-    //include_once __DIR__ . "/../includes/protege.php";
     include_once __DIR__ . "/../../config.inc.php";
 
     $sql = "SELECT u.id, u.nome, u.cpf, u.email, u.tipo, c.saldo
@@ -26,8 +25,4 @@
     }else{
         echo "Nenhum cliente cadastrado!";
     }
-    // if ($_SESSION['tipo'] != 'admin') {
-    //     echo "Acesso negado!";
-    //     exit;
-    // }
 ?>

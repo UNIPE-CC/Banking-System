@@ -82,3 +82,50 @@
 .login-form .btn.btn-secondary:hover {
     background: #999;
 }
+
+/* ================================
+   SOBRE
+================================= */
+.sobre-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.sobre-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.sobre-box h2 {
+    font-size: 28px;
+    color: #1b263b;
+    margin-bottom: 15px;
+}
+
+.sobre-box h3 {
+    font-size: 22px;
+    color: #1b263b;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.sobre-box p {
+    font-size: 16px;
+    color: #33415c;
+    margin-bottom: 15px;
+}
+
+.sobre-box ul {
+    margin-left: 22px;
+    margin-bottom: 15px;
+    color: #33415c;
+    font-size: 16px;
+}
+
+.sobre-box li {
+    margin-bottom: 8px;
+}
