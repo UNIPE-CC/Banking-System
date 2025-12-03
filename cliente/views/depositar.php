@@ -1,32 +1,32 @@
+<link rel="stylesheet" href="../assets/css/cliente.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+
 <?php
-// Conexão direta
-$conexao = mysqli_connect("localhost", "root", "", "bankingsystem");
+require_once __DIR__ . "/../../config.inc.php";
 
-if (!$conexao) {
-    die("Erro ao conectar ao banco: " . mysqli_connect_error());
-}
+// ID do usuário logado (pegar da sessão, se disponível)
+$usuario_id = $_SESSION['usuario_id'] ?? 3;
 
-// Usuário fixo para teste
-$usuario_id = 3;
+// Mensagem
+$mensagem = "";
 
-// Verifica se o formulário foi enviado
+// Processa depósito
 if (isset($_POST['valor'])) {
     $valor = floatval($_POST['valor']);
 
     if ($valor > 0) {
-        // Atualiza saldo
         $sql = "UPDATE contas SET saldo = saldo + $valor WHERE usuario_id = $usuario_id";
         if (mysqli_query($conexao, $sql)) {
-            echo "<p style='color: green;'>Depósito de R$ " . number_format($valor, 2, ',', '.') . " realizado com sucesso!</p>";
+            $mensagem = "<p class='msg-sucesso'>Depósito de R$ " . number_format($valor, 2, ',', '.') . " realizado com sucesso!</p>";
         } else {
-            echo "<p style='color: red;'>Erro ao depositar.</p>";
+            $mensagem = "<p class='msg-erro'>Erro ao depositar.</p>";
         }
     } else {
-        echo "<p style='color: red;'>Valor inválido!</p>";
+        $mensagem = "<p class='msg-erro'>Valor inválido!</p>";
     }
 }
 
-// Pega o saldo atual
+// Consulta saldo atual
 $sql_saldo = "SELECT saldo FROM contas WHERE usuario_id = $usuario_id LIMIT 1";
 $result = mysqli_query($conexao, $sql_saldo);
 $saldo = 0;
@@ -36,10 +36,14 @@ if ($result && mysqli_num_rows($result) > 0) {
 }
 ?>
 
-<h3>Saldo atual: R$ <?php echo $saldo; ?></h3>
+<div class="cliente-card">
+    <h3>Saldo atual: R$ <?php echo $saldo; ?></h3>
 
-<form method="post">
-    <label>Valor para depositar:</label>
-    <input type="number" step="0.01" name="valor" required>
-    <button type="submit">Depositar</button>
-</form>
+    <?php echo $mensagem; ?>
+
+    <form method="post" class="cliente-form">
+        <label for="valor">Valor para depositar:</label>
+        <input type="number" step="0.01" name="valor" id="valor" required>
+        <button type="submit" class="btn">Depositar</button>
+    </form>
+</div>
