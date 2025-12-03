@@ -17,13 +17,18 @@
                 tipo = '$tipo'
                 WHERE id = '$id'";
 
+        echo "<div class='alterar-container'><div class='alterar-card'>";
+
         if(mysqli_query($conexao, $sql)){
             echo "<h3>Cliente alterado com sucesso!</h3>";
-            echo "<a href='?pg=controller/adminHome'>Voltar</a>";
         }else{
             echo "<h3>Erro ao alterar o cliente</h3>";
         }
+        echo "<a class='btn-voltar' href='?pg=controller/adminHome'>Voltar</a>";
+        echo "</div></div>";
     }else{
+        echo "<div class='alterar-container'><div class='alterar-card'>";
         echo "<h2>Acesso negado</h2>";
-        echo "<a href='?pg=controller/adminHome'>Voltar</a>";
+        echo "<a class='btn-voltar' href='?pg=controller/adminHome'>Voltar</a>";
+        echo "</div></div>";
     }

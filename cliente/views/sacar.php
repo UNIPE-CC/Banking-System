@@ -9,6 +9,10 @@ if (!$conexao) {
 // Usuário fixo para teste
 $usuario_id = 3;
 
+// Inicializa mensagem
+$msg = "";
+$msg_class = "";
+
 // Verifica se o formulário foi enviado
 if (isset($_POST['valor'])) {
     $valor = floatval($_POST['valor']);
@@ -27,15 +31,19 @@ if (isset($_POST['valor'])) {
             // Atualiza saldo
             $sql = "UPDATE contas SET saldo = saldo - $valor WHERE usuario_id = $usuario_id";
             if (mysqli_query($conexao, $sql)) {
-                echo "<p style='color: green;'>Saque de R$ " . number_format($valor, 2, ',', '.') . " realizado com sucesso!</p>";
+                $msg = "Saque de R$ " . number_format($valor, 2, ',', '.') . " realizado com sucesso!";
+                $msg_class = "msg-sucesso";
             } else {
-                echo "<p style='color: red;'>Erro ao sacar.</p>";
+                $msg = "Erro ao sacar.";
+                $msg_class = "msg-erro";
             }
         } else {
-            echo "<p style='color: red;'>Saldo insuficiente!</p>";
+            $msg = "Saldo insuficiente!";
+            $msg_class = "msg-erro";
         }
     } else {
-        echo "<p style='color: red;'>Valor inválido!</p>";
+        $msg = "Valor inválido!";
+        $msg_class = "msg-erro";
     }
 }
 
@@ -49,10 +57,16 @@ if ($result && mysqli_num_rows($result) > 0) {
 }
 ?>
 
-<h3>Saldo atual: R$ <?php echo $saldo; ?></h3>
+<div class="cliente-card">
+    <h3>Saldo atual: R$ <?php echo $saldo; ?></h3>
 
-<form method="post">
-    <label>Valor para sacar:</label>
-    <input type="number" step="0.01" name="valor" required>
-    <button type="submit">Sacar</button>
-</form>
+    <?php if($msg != ""): ?>
+        <p class="<?php echo $msg_class; ?>"><?php echo $msg; ?></p>
+    <?php endif; ?>
+
+    <form class="cliente-form" method="post">
+        <label>Valor para sacar:</label>
+        <input type="number" step="0.01" name="valor" required>
+        <button type="submit">Sacar</button>
+    </form>
+</div>

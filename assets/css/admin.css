@@ -56,4 +56,208 @@
     padding-left: -300px;
 }
 
+/* Título */
+.titulo-lista {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: #140f79;
+    font-weight: bold;
+}
 
+/* Nenhum cliente */
+.nenhum-cliente {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Tabela */
+.clientes-tabela {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+.clientes-tabela thead th {
+    background: #140f79;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Linhas */
+.clientes-tabela tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.clientes-tabela tbody tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.clientes-tabela tbody td {
+    padding: 12px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Coluna Ações */
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botões */
+.btn-edit,
+.btn-delete {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 14px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Botão Editar */
+.btn-edit {
+    background: #1b6ef3;
+}
+
+.btn-edit:hover {
+    background: #164fbd;
+}
+
+/* Botão Excluir */
+.btn-delete {
+    background: #d62828;
+}
+
+.btn-delete:hover {
+    background: #a4161a;
+}
+
+/* Título */
+.form-title {
+    text-align: center;
+    margin-top: 20px;
+    color: #140f79;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Card do formulário */
+.form-card {
+    width: 60%;
+    margin: 25px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.cliente-form .form-group {
+    margin-bottom: 18px;
+}
+
+.cliente-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #1b263b;
+}
+
+.cliente-form input,
+.cliente-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.cliente-form input:focus,
+.cliente-form select:focus {
+    border-color: #140f79;
+    outline: none;
+    box-shadow: 0 0 4px rgba(20, 15, 121, 0.3);
+}
+
+/* Botões */
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-submit {
+    background: #140f79;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-submit:hover {
+    background: #0f0c5a;
+}
+
+.btn-back {
+    padding: 12px 25px;
+    background: #bbb;
+    color: #333;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-back:hover {
+    background: #999;
+}
+
+.alterar-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alterar-card {
+    text-align: center;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    max-width: 400px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #003399;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.btn-voltar:hover {
+    background: #001f66;
+}

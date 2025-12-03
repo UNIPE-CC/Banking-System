@@ -17,20 +17,38 @@
     }
 ?>
 
-<h2>Atualizar Cliente</h2>
+<h2 class="form-title">Atualizar Cliente</h2>
+<hr>
 
-<form action="?pg=controller/alterar" method="post">
-    <input type="hidden" name="id" value="<?=$id?>">
-    <label>Nome:</label>
-    <input type="text" name="nome" value="<?=$nome?>"><br>
-    <label>cpf:</label>
-    <input type="text" name="cpf" value="<?=$cpf?>"><br>
-    <label>Email:</label>
-    <input type="text" name="email" value="<?=$email?>"><br>
-    <label>Senha:</label>
-    <input type="text" name="senha" value="<?=$senha?>"><br>
-    <label>Tipo:</label>
-    <input type="text" name="tipo" value="<?=$tipo?>"><br>
-    <input type="submit" value="Atualizar Cliente">
-    <a href='?pg=controller/adminHome&id=$dados[id]'>Voltar</a><br>
-</form>
+<div class="form-card">
+    <form action="?pg=controller/alterar" method="post" class="cliente-form">
+        <input type="hidden" name="id" value="<?=$id?>">
+        <div class="form-group">
+            <label>Nome:</label>
+            <input type="text" name="nome" value="<?=$nome?>">
+        </div>
+        <div class="form-group">
+            <label>cpf:</label>
+            <input type="text" name="cpf" value="<?=$cpf?>">
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="text" name="email" value="<?=$email?>">
+        </div>
+        <div class="form-group">
+            <label>Senha:</label>
+            <input type="text" name="senha" value="<?=$senha?>">
+        </div>
+        <div class="form-group">
+            <label>Tipo:</label>
+            <select name="tipo" required>
+                <option value="Cliente" <?= ($tipo == "Cliente" ? "selected" : "") ?>>Cliente</option>
+                <option value="Admin" <?= ($tipo == "Admin" ? "selected" : "") ?>>Admin</option>
+            </select>
+        </div>
+        <div class="form-buttons">
+            <button type="submit" class="btn-submit">Atualizar</button>
+            <a href='?pg=controller/adminHome' class="btn-back">Voltar</a>
+        </div>
+    </form>
+</div>

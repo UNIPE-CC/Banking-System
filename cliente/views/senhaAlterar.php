@@ -9,30 +9,43 @@ if (!$conexao) {
 // Usuário fixo para teste
 $usuario_id = 3;
 
+// Inicializa mensagem
+$msg = "";
+$msg_class = "";
+
 // Verifica se o formulário foi enviado
 if (isset($_POST['nova_senha'])) {
     $nova_senha = $_POST['nova_senha'];
 
     if (!empty($nova_senha)) {
-        // Atualiza senha no banco (usando hash simples)
+        // Atualiza senha no banco (hash seguro)
         $senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
         $sql = "UPDATE usuarios SET senha = '$senha_hash' WHERE id = $usuario_id";
 
         if (mysqli_query($conexao, $sql)) {
-            echo "<p style='color: green;'>Senha alterada com sucesso!</p>";
+            $msg = "Senha alterada com sucesso!";
+            $msg_class = "msg-sucesso";
         } else {
-            echo "<p style='color: red;'>Erro ao alterar senha.</p>";
+            $msg = "Erro ao alterar senha.";
+            $msg_class = "msg-erro";
         }
     } else {
-        echo "<p style='color: red;'>Informe uma senha válida!</p>";
+        $msg = "Informe uma senha válida!";
+        $msg_class = "msg-erro";
     }
 }
 ?>
 
-<h3>Alterar senha</h3>
+<div class="cliente-card">
+    <h3>Alterar senha</h3>
 
-<form method="post">
-    <label>Nova senha:</label>
-    <input type="password" name="nova_senha" required>
-    <button type="submit">Alterar</button>
-</form>
+    <?php if($msg != ""): ?>
+        <p class="<?php echo $msg_class; ?>"><?php echo $msg; ?></p>
+    <?php endif; ?>
+
+    <form class="cliente-form" method="post">
+        <label>Nova senha:</label>
+        <input type="password" name="nova_senha" required>
+        <button type="submit">Alterar</button>
+    </form>
+</div>

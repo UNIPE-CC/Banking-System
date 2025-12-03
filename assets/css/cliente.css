@@ -1,0 +1,174 @@
+/* ================================
+   PAINEL CLIENTE
+================================ */
+
+html, body {
+    height: 100%;
+}
+
+h3 {
+    text-align: center;
+    font-size: 28px;    /* aumenta o tamanho */
+    font-weight: bold;   /* deixa o texto mais destacado */
+    margin: 30px 0;      /* dá espaçamento em cima e embaixo */
+    color: #140f79;      /* opcional: cor combinando com o tema */
+}
+
+
+.page-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.client-content {
+    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+/* Header */
+.client-header {
+    background-color: #140f79;
+    padding: 18px;
+}
+
+.client-logo {
+    height: 60px;
+    margin-left: 95px;
+}
+
+.client-title {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+/* Menu */
+.client-menu {
+    margin: 25px 25px 0;
+    padding-left: 25%;
+}
+
+.client-menu a {
+    padding: 10px 18px;
+    background: #140f79;
+    color: white;
+    border-radius: 6px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.client-menu a:hover {
+    background: #0f0c5a;
+}
+
+/* Conteúdo */
+.client-content {
+    padding: 20px 35px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #140f79;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.footer-container img {
+    height: 60px;
+    margin-left: 95px;
+}
+
+.footer-container span {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+/* ================================
+   CLIENTE - PAINEL E FORMULÁRIOS
+================================ */
+
+.cliente-card {
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.cliente-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #140f79;
+}
+
+.cliente-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.cliente-form label {
+    font-weight: bold;
+    color: #1b263b;
+}
+
+.cliente-form input[type="number"],
+.cliente-form input[type="text"],
+.cliente-form input[type="email"],
+.cliente-form input[type="password"],
+.cliente-form select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.cliente-form input:focus,
+.cliente-form select:focus {
+    border-color: #140f79;
+    outline: none;
+}
+
+.cliente-form button {
+    padding: 10px 20px;
+    background: #140f79;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cliente-form button:hover {
+    background: #0f0c5a;
+}
+
+/* Mensagens de status */
+.msg-sucesso {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.msg-erro {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
