@@ -27,7 +27,7 @@
 
 _ Salve o projeto no caminho correto no XAMPP:
     - C:\xampp\htdocs\
-- Repositório: https://github.com/SEU-USUARIO/Banking-System.git
+- Repositório: https://github.com/doglaska/Banking-System.git
 
 1. Inicialize o Apache e o MySQL no XAMPP.
 
